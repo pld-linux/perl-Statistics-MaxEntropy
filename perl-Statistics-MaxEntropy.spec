@@ -10,7 +10,7 @@ Summary(pl):	MaxEntropy - modu³ do modelowania najwiêkszej entropii i indukcji c
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
 Release:	12
-License:	GPL
+License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b1f7972596653b423e5d65fc7e29f2ee
