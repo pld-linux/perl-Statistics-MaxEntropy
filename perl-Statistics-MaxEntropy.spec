@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ME.wrapper.pl
 %{perl_sitelib}/Statistics/*.pm
 # empty autosplit.ix files
-#%{perl_sitelib}/auto/Statistics/Candidates
-#%{perl_sitelib}/auto/Statistics/MaxEntropy
-#%{perl_sitelib}/auto/Statistics/SparseVector
+#%%{perl_sitelib}/auto/Statistics/Candidates
+#%%{perl_sitelib}/auto/Statistics/MaxEntropy
+#%%{perl_sitelib}/auto/Statistics/SparseVector
 %{_mandir}/man[13]/*
