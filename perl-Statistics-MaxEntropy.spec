@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Statistics
 %define	pnam	MaxEntropy
@@ -5,7 +9,7 @@ Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Indu
 Summary(pl):	MaxEntropy - modu³ do modelowania najwiêkszej entropii i indukcji cech
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
-Release:	10
+Release:	11
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -45,6 +49,7 @@ zbioru cech.
 %build
 perl Makefile.PL
 %{__make}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -59,7 +64,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README *txt
 %attr(755,root,root) %{_bindir}/ME.wrapper.pl
 %{perl_sitelib}/Statistics/*.pm
-%{perl_sitelib}/auto/Statistics/Candidates
-%{perl_sitelib}/auto/Statistics/MaxEntropy
-%{perl_sitelib}/auto/Statistics/SparseVector
+# empty autosplit.ix files
+#%{perl_sitelib}/auto/Statistics/Candidates
+#%{perl_sitelib}/auto/Statistics/MaxEntropy
+#%{perl_sitelib}/auto/Statistics/SparseVector
 %{_mandir}/man[13]/*
