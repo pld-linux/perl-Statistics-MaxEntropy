@@ -9,13 +9,13 @@ Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Indu
 Summary(pl):	MaxEntropy - modu³ do modelowania najwiêkszej entropii i indukcji cech
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
-Release:	11
+Release:	12
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -47,7 +47,8 @@ zbioru cech.
 %patch -p0
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 %{!?_without_tests:%{__make} test}
 
@@ -63,9 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README *txt
 %attr(755,root,root) %{_bindir}/ME.wrapper.pl
-%{perl_sitelib}/Statistics/*.pm
+%{perl_vendorlib}/Statistics/*.pm
 # empty autosplit.ix files
-#%%{perl_sitelib}/auto/Statistics/Candidates
-#%%{perl_sitelib}/auto/Statistics/MaxEntropy
-#%%{perl_sitelib}/auto/Statistics/SparseVector
+#%%{perl_vendorlib}/auto/Statistics/Candidates
+#%%{perl_vendorlib}/auto/Statistics/MaxEntropy
+#%%{perl_vendorlib}/auto/Statistics/SparseVector
 %{_mandir}/man[13]/*
