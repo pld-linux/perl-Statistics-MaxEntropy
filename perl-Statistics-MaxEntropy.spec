@@ -2,28 +2,41 @@
 %define	pdir	Statistics
 %define	pnam	MaxEntropy
 Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Induction
+Summary(pl):	MaxEntropy - modu³ do modelowania najwiêkszej entropii i indukcji cech
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
-Release:	9
+Release:	10
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module is an implementation of the Generalised and Improved Iterative
-Scaling (GIS, IIS) algorithms and the Feature Induction (FI) algorithm
-as defined in (B<Darroch and Ratcliff 1972>) and (B<Della Pietra et
-al. 1997>). The purpose of the scaling algorithms is to find the maximum
-entropy distribution given a set of events and (optionally) an initial
-distribution. Also a set of candidate features may be specified; then
-the FI algorithm may be applied to find and add the candidate feature(s)
-that give the largest `gain' in terms of Kullback Leibler divergence
-when it is added to the current set of features.
+This module is an implementation of the Generalised and Improved
+Iterative Scaling (GIS, IIS) algorithms and the Feature Induction (FI)
+algorithm as defined in (Darroch and Ratcliff 1972) and (Della Pietra
+et al. 1997). The purpose of the scaling algorithms is to find the
+maximum entropy distribution given a set of events and (optionally) an
+initial distribution. Also a set of candidate features may be
+specified; then the FI algorithm may be applied to find and add the
+candidate feature(s) that give the largest `gain' in terms of Kullback
+Leibler divergence when it is added to the current set of features.
+
+%description -l pl
+Ten modu³ jest implementacj± algorytmów uogólnionego i ulepszonego
+iteracyjnego skalowania (GIS, IIS) oraz algorytmu indukcji cech (FI -
+Feature Induction), zdefiniowanych przez Darrocha i Ratcliffa w 1972
+roku oraz Della Pietra i innych w 1997. Celem algorytmów skaluj±cych
+jest znalezienie maksymalnego rozproszenia entropii zadanej zbiorem
+zdarzeñ i (opcjonalnie) pocz±tkowym rozproszeniem. Mo¿na podaæ tak¿e
+zbiór cech-kandydatów; wtedy mo¿e byæ zastosowany algorytm FI do
+odnalezienia i dodanie cech-kandydatów, które daj± najwiêkszy zysk w
+sensie odchylenia Kullbacka-Leiblera kiedy s± dodane do aktualnego
+zbioru cech.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -38,14 +51,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README *txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README *txt
 %attr(755,root,root) %{_bindir}/ME.wrapper.pl
 %{perl_sitelib}/Statistics/*.pm
 %{perl_sitelib}/auto/Statistics/Candidates
