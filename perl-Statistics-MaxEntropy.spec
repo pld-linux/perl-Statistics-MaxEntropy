@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Statistics
-%define	pnam	MaxEntropy
+%define		pdir	Statistics
+%define		pnam	MaxEntropy
 Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Induction
 Summary(pl):	MaxEntropy - modu³ do modelowania najwiêkszej entropii i indukcji cech
 Name:		perl-Statistics-MaxEntropy
