@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Statistics
 %define	pnam	MaxEntropy
-Summary:	Statistics-MaxEntropy perl module
-Summary(pl):	Modu³ perla Statistics-MaxEntropy
+Summary:	Statistics::MaxEntropy perl module
+Summary(pl):	Modu³ perla Statistics::MaxEntropy
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
 Release:	8
@@ -16,10 +16,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Statistics-MaxEntropy perl module.
+Statistics::MaxEntropy perl module.
 
 %description -l pl
-Modu³ perla Statistics-MaxEntropy.
+Modu³ perla Statistics::MaxEntropy.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
