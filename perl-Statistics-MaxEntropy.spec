@@ -1,8 +1,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Statistics
 %define	pnam	MaxEntropy
-Summary:	Statistics::MaxEntropy perl module
-Summary(pl):	Modu³ perla Statistics::MaxEntropy
+Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Induction
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
 Release:	8
@@ -16,10 +15,15 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Statistics::MaxEntropy perl module.
-
-%description -l pl
-Modu³ perla Statistics::MaxEntropy.
+This module is an implementation of the Generalised and Improved Iterative
+Scaling (GIS, IIS) algorithms and the Feature Induction (FI) algorithm
+as defined in (B<Darroch and Ratcliff 1972>) and (B<Della Pietra et
+al. 1997>). The purpose of the scaling algorithms is to find the maximum
+entropy distribution given a set of events and (optionally) an initial
+distribution. Also a set of candidate features may be specified; then
+the FI algorithm may be applied to find and add the candidate feature(s)
+that give the largest `gain' in terms of Kullback Leibler divergence
+when it is added to the current set of features.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
