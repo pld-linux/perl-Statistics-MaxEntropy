@@ -9,14 +9,16 @@ Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Indu
 Summary(pl):	MaxEntropy - modu³ do modelowania najwiêkszej entropii i indukcji cech
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
-Release:	13
+Release:	14
 License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b1f7972596653b423e5d65fc7e29f2ee
 Patch0:		%{name}-paths.patch
 BuildRequires:	perl-devel >= 1:5.8.0
+%{?with_tests:BuildRequires:	perl-perldoc}
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-perldoc
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
