@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Statistics
 %define	pnam	MaxEntropy
-%include	/usr/lib/rpm/macros.perl
 Summary:	Statistics-MaxEntropy perl module
 Summary(pl):	Modu³ perla Statistics-MaxEntropy
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
-Release:	7
-
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -23,7 +22,7 @@ Statistics-MaxEntropy perl module.
 Modu³ perla Statistics-MaxEntropy.
 
 %prep
-%setup -q -n Statistics-MaxEntropy-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch -p0
 
 %build
