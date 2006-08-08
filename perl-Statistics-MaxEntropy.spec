@@ -47,7 +47,7 @@ zbioru cech.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch -p0
+%patch0 -p0
 
 # kill insecure /tmp usage and possible conflict with another users' builds
 install -d tmp
