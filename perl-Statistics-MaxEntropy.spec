@@ -6,7 +6,7 @@
 %define		pdir	Statistics
 %define		pnam	MaxEntropy
 Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Induction
-Summary(pl):	MaxEntropy - modu³ do modelowania najwiêkszej entropii i indukcji cech
+Summary(pl.UTF-8):   MaxEntropy - moduÅ‚ do modelowania najwiÄ™kszej entropii i indukcji cech
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
 Release:	15
@@ -33,16 +33,16 @@ specified; then the FI algorithm may be applied to find and add the
 candidate feature(s) that give the largest `gain' in terms of Kullback
 Leibler divergence when it is added to the current set of features.
 
-%description -l pl
-Ten modu³ jest implementacj± algorytmów uogólnionego i ulepszonego
+%description -l pl.UTF-8
+Ten moduÅ‚ jest implementacjÄ… algorytmÃ³w uogÃ³lnionego i ulepszonego
 iteracyjnego skalowania (GIS, IIS) oraz algorytmu indukcji cech (FI -
 Feature Induction), zdefiniowanych przez Darrocha i Ratcliffa w 1972
-roku oraz Della Pietra i innych w 1997. Celem algorytmów skaluj±cych
+roku oraz Della Pietra i innych w 1997. Celem algorytmÃ³w skalujÄ…cych
 jest znalezienie maksymalnego rozproszenia entropii zadanej zbiorem
-zdarzeñ i (opcjonalnie) pocz±tkowym rozproszeniem. Mo¿na podaæ tak¿e
-zbiór cech-kandydatów; wtedy mo¿e byæ zastosowany algorytm FI do
-odnalezienia i dodanie cech-kandydatów, które daj± najwiêkszy zysk w
-sensie odchylenia Kullbacka-Leiblera kiedy s± dodane do aktualnego
+zdarzeÅ„ i (opcjonalnie) poczÄ…tkowym rozproszeniem. MoÅ¼na podaÄ‡ takÅ¼e
+zbiÃ³r cech-kandydatÃ³w; wtedy moÅ¼e byÄ‡ zastosowany algorytm FI do
+odnalezienia i dodanie cech-kandydatÃ³w, ktÃ³re dajÄ… najwiÄ™kszy zysk w
+sensie odchylenia Kullbacka-Leiblera kiedy sÄ… dodane do aktualnego
 zbioru cech.
 
 %prep
