@@ -6,7 +6,7 @@
 %define		pdir	Statistics
 %define		pnam	MaxEntropy
 Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Induction
-Summary(pl.UTF-8):   MaxEntropy - moduł do modelowania największej entropii i indukcji cech
+Summary(pl.UTF-8):	MaxEntropy - moduł do modelowania największej entropii i indukcji cech
 Name:		perl-Statistics-MaxEntropy
 Version:	0.9
 Release:	15
