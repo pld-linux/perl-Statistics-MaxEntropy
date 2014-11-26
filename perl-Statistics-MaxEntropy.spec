@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Statistics
 %define		pnam	MaxEntropy
+%include	/usr/lib/rpm/macros.perl
 Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Induction
 Summary(pl.UTF-8):	MaxEntropy - moduł do modelowania największej entropii i indukcji cech
 Name:		perl-Statistics-MaxEntropy
@@ -15,9 +15,12 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b1f7972596653b423e5d65fc7e29f2ee
 Patch0:		%{name}-paths.patch
+URL:		http://search.cpan.org/dist/Statistics-MaxEntropy/
 BuildRequires:	perl-devel >= 1:5.8.0
-%{?with_tests:BuildRequires:	perl-perldoc}
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-perldoc
+%endif
 Requires:	perl-perldoc
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
