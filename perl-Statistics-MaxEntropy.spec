@@ -4,7 +4,6 @@
 
 %define		pdir	Statistics
 %define		pnam	MaxEntropy
-%include	/usr/lib/rpm/macros.perl
 Summary:	MaxEntropy - Perl5 module for Maximum Entropy Modeling and Feature Induction
 Summary(pl.UTF-8):	MaxEntropy - moduł do modelowania największej entropii i indukcji cech
 Name:		perl-Statistics-MaxEntropy
